@@ -4,7 +4,7 @@ Project: Movie Trailer Website  - [Shyamala Prakash]
 Required Libraries and Dependencies
 -----------------------------------
 [In this section list your project’s dependencies. A basic Movie Website Trailer project requires Python v2.* to be installed]
-
+Requires: Python v2.*
 
 How to Run Project
 ------------------
