@@ -5,10 +5,11 @@ Required Libraries and Dependencies
 -----------------------------------
 [In this section list your project’s dependencies. A basic Movie Website Trailer project requires Python v2.* to be installed]
 Requires: Python v2.*
+Url for the project on Git: https://github.com/shyamala98/MovieProject.git
 
 How to Run Project
 ------------------
-[In this section, explicitly describe the steps necessary to run your project from Github repo to the program execution. Make sure you try out these steps to verify that you didn’t overlook anything.]
+[In this section, exilplicitly describe the steps necessary to run your project from Github repo to the program execution. Make sure you try out these steps to verify that you didn’t overlook anything.]
 
 
 Extra Credit Description
