@@ -25,6 +25,11 @@ main_page_head = '''
             width: 640px;
             height: 480px;
         }
+        #storyLine .modal-dialog {
+            margin-top: 200px;
+            width: 4800px;
+            height: 480px;
+        }
         .hanging-close {
             position: absolute;
             top: -12px;
@@ -56,6 +61,28 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
+        /* Code copied from w3schools website */
+        /* Popover */
+        .popover {
+          border: 2px dotted red;
+        }
+        /* Popover Header */
+        .popover-title {
+          background-color: #8AC007;
+          color: #FFFFFF;
+          font-size: 28px;
+          text-align:center;
+        }
+        /* Popover Body */
+        .popover-content {
+          background-color: coral;
+          color: #FFFFFF;
+          padding: 25px;
+        }
+        /* Popover Arrow */
+        .arrow {
+          border-right-color: red !important;
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -75,11 +102,19 @@ main_page_head = '''
               'frameborder': 0
             }));
         });
+
+        $(document).on('hover', '.movie-tile', function(event) {
+            var storyLineStr = $(this).attr('data-storyLine')
+             $('[data-toggle="popover"]').popover();
+        });
+
         // Animate in the movies when the page loads
         $(document).ready(function () {
           $('.movie-tile').hide().first().show("fast", function showNext() {
             $(this).next("div").show("fast", showNext);
           });
+        //Set the popover for the movie images
+          $('[data-pop="popoverStory"]').popover();
         });
     </script>
 </head>
@@ -123,8 +158,12 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer" data-storyLine="{storyLine}">
-    <img src="{poster_image_url}" width="220" height="342">
-    <h3>{movie_title}</h3>
+    <img src="{poster_image_url}" width="220" height="392" data-pop="popoverStory" data-trigger="hover" title="{movie_title}" data-content="{storyLine}">
+    <h4>{movie_title}</h4>
+        <!--
+        <a href="#" id="popoverStory" data-trigger="hover" title="{movie_title}" data-content="{storyLine}">...story</a>
+        -->
+    <!--p>{storyLine}</p-->
 </div>
 '''
 
