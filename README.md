@@ -15,8 +15,8 @@ Clone the MovieTrailer project from Git to your local machine
 Running the project from Windows command line:<br/>
 python \<Local Directory where project is cloned\>/MovieProject/entertainment_center.py
 
-Running the project from the python shell:
-Launch the python shell 
+Running the project from the python shell:<br/>
+Launch the python shell. <br/>
 You will have to change the current directory to be the directory where the module entertainment_center.py lives, for example, the directory where you cloned 
 this repository locally is C:\cloneRepos, execute the following commands in the python shell
 
