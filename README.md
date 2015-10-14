@@ -3,14 +3,25 @@ Project: Movie Trailer Website  - [Shyamala Prakash]
 
 Required Libraries and Dependencies
 -----------------------------------
-[In this section list your project’s dependencies. A basic Movie Website Trailer project requires Python v2.* to be installed]
-Requires: Python v2.*
+Requires Python v2.* (Download site)
+Make sure the directory containing python.exe is in your PATH variable
+
 Url for the project on Git: https://github.com/shyamala98/MovieProject.git
 
 How to Run Project
 ------------------
-[In this section, exilplicitly describe the steps necessary to run your project from Github repo to the program execution. Make sure you try out these steps to verify that you didn’t overlook anything.]
+Clone the MovieTrailer project from Git to your local machine
 
+Running the project from Windows command line:
+python <Local Directory where project is cloned>/MovieProject/entertainment_center.py
+
+Running the project from the python shell:
+Launch the python shell 
+You will have to change the current directory to be the directory where the module entertainment_center.py lives, for example, the directory where you cloned 
+this repository locally is C:\cloneRepos, execute the following commands in the python shell
+>>>import os
+>>>os.chdir('C:\cloneRepos\MovieProject')
+>>>execfile('entertainment_center.py')
 
 Extra Credit Description
 ------------------------
