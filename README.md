@@ -1,5 +1,6 @@
 Project: Movie Trailer Website  - [Shyamala Prakash]
 ================================
+Creates a web page with 6 movie titles. Opens the page using the default web browser. Clicking on the poster image for a movie, launches the trailer for the movie.
 Url for the project on Git: https://github.com/shyamala98/MovieProject.git
 
 Required Libraries and Dependencies
