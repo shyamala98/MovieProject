@@ -27,8 +27,7 @@ this repository locally is C:\cloneRepos, execute the following commands in the 
 
 Extra Credit Description
 ------------------------
-[If your project includes any features that exceed specifications, (such as including addition information about the movies or personalizing the website with additional HTML/CSS) or if your project deviates from the description in some other interesting way, describe that here.]
+A flyout (popover) with the movie storyline is displayed when the user hovers on the image for the movie.
 
+The Bootstrap popover plugin feature was used to implement this feature. Changes were made in the file fresh_tomatoes.py
 
-Miscellaneous
--------------

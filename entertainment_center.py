@@ -6,6 +6,7 @@
 import media
 import fresh_tomatoes
 
+# Creates and returns a list of movies, for the time being the movie titles and other details are hard coded
 def getMovieList():
     #Create a list of movies
     list_of_movies = []
@@ -25,8 +26,11 @@ def getMovieList():
 
     return list_of_movies
 
+
 def main():
+    #Get the list of movies
     list_of_movies = getMovieList()
+    #Create the html page fresh_tomatoes.html, launch the default webbrowser and load fresh_tomatoes.html
     fresh_tomatoes.open_movies_page(list_of_movies)
 
 if __name__ == '__main__':

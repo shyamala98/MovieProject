@@ -25,11 +25,6 @@ main_page_head = '''
             width: 640px;
             height: 480px;
         }
-        #storyLine .modal-dialog {
-            margin-top: 200px;
-            width: 4800px;
-            height: 480px;
-        }
         .hanging-close {
             position: absolute;
             top: -12px;
@@ -61,23 +56,24 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
-        /* Code copied from w3schools website */
-        /* Popover */
+        /* Code adapted from from w3schools website - http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp*/
+        /* Set the style for the Popover */
         .popover {
           border: 2px dotted red;
         }
         /* Popover Header */
         .popover-title {
           background-color: #8AC007;
-          color: #FFFFFF;
-          font-size: 28px;
+          color: #000000;
+          font-size: 16px;
+          font-weight: bold;
           text-align:center;
         }
         /* Popover Body */
         .popover-content {
           background-color: coral;
           color: #FFFFFF;
-          padding: 25px;
+          padding: 15px;
         }
         /* Popover Arrow */
         .arrow {
@@ -101,11 +97,6 @@ main_page_head = '''
               'src': sourceUrl,
               'frameborder': 0
             }));
-        });
-
-        $(document).on('hover', '.movie-tile', function(event) {
-            var storyLineStr = $(this).attr('data-storyLine')
-             $('[data-toggle="popover"]').popover();
         });
 
         // Animate in the movies when the page loads
@@ -157,13 +148,13 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer" data-storyLine="{storyLine}">
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+    <!--
+        Added attributes to display the popover when user hovers on the image for the movie
+    -->
     <img src="{poster_image_url}" width="220" height="392" data-pop="popoverStory" data-trigger="hover" title="{movie_title}" data-content="{storyLine}">
     <h4>{movie_title}</h4>
-        <!--
-        <a href="#" id="popoverStory" data-trigger="hover" title="{movie_title}" data-content="{storyLine}">...story</a>
-        -->
-    <!--p>{storyLine}</p-->
+
 </div>
 '''
 
@@ -181,6 +172,7 @@ def create_movie_tiles_content(movies):
                               else None)
 
         # Append the tile for the movie with its content filled in
+        # Added the parameter for storyLine
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,

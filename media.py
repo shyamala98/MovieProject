@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
 # Name:        media.py
-# Purpose:
+# Purpose:     Define the Movie class
 #
 # Author:      shyamala
 #-------------------------------------------------------------------------------
@@ -16,6 +16,7 @@ class Movie(object):
 
 def main():
     pass
+
 #test
 if __name__ == '__main__':
     main()
