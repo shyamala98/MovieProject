@@ -28,6 +28,6 @@ this repository locally is C:\cloneRepos, execute the following commands in the 
 Extra Credit Description
 ------------------------
 A flyout (popover) with the movie storyline is displayed when the user hovers on the image for the movie.
-
+The style attributes for the popover were copied from sample code in w3schools website - http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp
 The Bootstrap popover plugin feature was used to implement this feature. Changes were made in the file fresh_tomatoes.py
 

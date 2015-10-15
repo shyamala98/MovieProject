@@ -56,7 +56,7 @@ main_page_head = '''
             top: 0;
             background-color: white;
         }
-        /* Code adapted from from w3schools website - http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp*/
+        /* Code adapted from w3schools website - http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp*/
         /* Set the style for the Popover */
         .popover {
           border: 2px dotted red;
